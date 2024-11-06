@@ -96,27 +96,32 @@ body {
 /* Main Content Styling */
 .content {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: column; /* Arrange items in a single column */
+    gap: 1.5rem; /* Space between each card */
     padding: 2rem;
-    align-items: center;
     width: 100%;
+    max-width: 1000px; /* Restrict the maximum width of the content area */
+    margin: 0 auto; /* Center the container */
     z-index: 1; /* Ensure content appears above the overlay */
 }
 
 .card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
     background-color: #FDF9F3;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 1.5rem;
     text-align: left;
+}
+
+/* Custom Height for Each Card */
+.card:nth-child(1) {
+    height: 200px; /* Set custom height for the first card */
 }
 
 .card-text {
@@ -140,12 +145,13 @@ body {
 
 /* Card Image Styling */
 .card-image {
-    flex: 0 0 30%; /* Set image to take 30% of the card's width */
-    max-width: 30%;
+    flex: 0 0 150px; /* Fixed width for images within cards */
+    max-width: 150px;
     object-fit: cover;
     border-radius: 6px;
-    height: 100%;
+    height: auto;
 }
+
 /* Remove underline and inherit color for clickable cards */
 .card-link {
     text-decoration: none; /* Remove underline */
@@ -158,32 +164,41 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    /* Stack content vertically on smaller screens */
-    .card {
-        flex-direction: column;
-        text-align: center;
+@media (min-width: 768px) {
+    .content {
+        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
     }
-    
-    .card-image {
-        max-width: 100%;
-        width: 100%;
+}
+@media (min-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns on even larger screens */
     }
 }
 
 /* PDF Card Styling */
 .pdf-card {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the pdf card itself */
+    display: flex;
+    justify-content: center; /* Centers content inside the card */
 }
 
 .pdf-container {
-    margin-top: 1rem;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 600px; /* Adjust height to control the viewable area */
+    width: 100%; /* Make the container take up the full width of pdf-card */
+    max-width: 800px; /* Limit the width of the PDF */
+    display: flex;
+    justify-content: center; /* Center the iframe within the container */
+}
+
+/* Centered PDF iframe */
+.pdf-container iframe {
+    width: 100%; /* Ensure the iframe fills the pdf-container */
+    height: 800px; /* Adjust height as needed */
+    border: none; /* Remove border for a cleaner look */
 }
 
 
@@ -239,6 +254,20 @@ body {
 .team-card p {
     font-size: 1rem;
     color: #666; /* Light gray text color for roles */
+}
+
+/* Styling for the team images within "The who" card */
+.team-images {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mini-team-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #595959;
+    object-fit: cover;
 }
 
 .video-container {
