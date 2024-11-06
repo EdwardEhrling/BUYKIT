@@ -1,0 +1,116 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FEFCF8;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #FDF9F3;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo-image {
+    width: 120px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+
+.user-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content Styling */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px; /* Limit max width on larger screens */
+    background-color: #FDF9F3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Card Image Styling */
+.card-image {
+    flex: 0 0 30%; /* Set image to take 30% of the card's width */
+    max-width: 30%;
+    object-fit: cover;
+    border-radius: 6px;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    /* Stack content vertically on smaller screens */
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .card-image {
+        max-width: 100%;
+        width: 100%;
+    }
+}

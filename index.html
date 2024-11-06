@@ -1,29 +1,50 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyKit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="buykit.png" alt="BuyKit Logo" class="logo-image">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Demo</a></li>
+            <li><a href="#">Report</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </nav>
 
-<html lang=”en”>
-
-  <head>
-
-    <meta charset=”UTF-8″>
-
-    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
-
-    <meta http-equiv=”X-UA-Compatible” content=”ie=edge”>
-
-    <title>My Website [Name of the website]</title>
-
-  </head>
-
-  <body>
-
-    <main>
-
-        <h1>Welcome to My Website [Name of the website]</h1>  
-
-        <p>This is my new website hosted on GitHub Pages!</p>
-
+    <!-- Main Content -->
+    <main class="content">
+        <section class="card">
+            <div class="card-text">
+                <h2>The what</h2>
+                <p>Watch a demo of the final product</p>
+            </div>
+            <img src="generatorn.png" alt="Demo Image" class="card-image">
+        </section>
+        <section class="card">
+            <div class="card-text">
+                <h2>The why</h2>
+                <p>Explore the details of the project in the report</p>
+            </div>
+            <img src="report.png" alt="Report Image" class="card-image">
+        </section>
+        
+        <!-- "The who" Card with Link -->
+        <a href="team.html" class="card-link">
+            <section class="card">
+                <div class="card-text">
+                    <h2>The who</h2>
+                    <p>See the members of the project and their contact information</p>
+                </div>
+                <img src="team.png" alt="Team Image" class="card-image">
+            </section>
+        </a>
     </main>
-
-  </body>
-
+</body>
 </html>
