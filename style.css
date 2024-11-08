@@ -108,6 +108,7 @@ body {
 .card {
     width: 100%;
     background-color: #FDF9F3;
+    border: 1px solid #666;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -147,6 +148,7 @@ body {
 .card-image {
     flex: 0 0 150px; /* Fixed width for images within cards */
     max-width: 150px;
+    border: 1px solid #666;
     object-fit: cover;
     border-radius: 6px;
     height: auto;
@@ -227,6 +229,7 @@ body {
 /* Team Card */
 .team-card {
     background-color: #FEFCF8; /* Soft card background color from previous styling */
+    border: 1px solid #666;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
     padding: 1.5rem;
